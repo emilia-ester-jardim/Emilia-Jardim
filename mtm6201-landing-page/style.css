@@ -35,7 +35,7 @@ fieldset {
     margin: 1rem;
     padding: 0 10px;
 }
-.float-label {
+label {
     position: absolute;
     color: #333131;
     font-size: 16px;
@@ -48,7 +48,7 @@ input {
     border-radius: 5px;
     font-size: 16px;
 }
-input.spam-input {
+input#spam {
     width: 5%;
  }
 

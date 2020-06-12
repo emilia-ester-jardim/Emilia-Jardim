@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,23 +23,23 @@
                     <h2>Apply Now</h2>
                     <p>Enter your info below to get started.</p>
                     <fieldset class="first-name">
-                        <label for="first-name" class="float-label">First name</label>
-                        <input type="text" name="first-name">
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name">
                     </fieldset>
                     <fieldset class="last-name">
-                        <label for="last-name" class="float-label">Last name</label>
-                        <input type="text" name="last-name">
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name">
                     </fieldset>
                     <fieldset class="email-address">
-                        <label for="email-address" class="float-label">Email Adress</label>
-                        <input type="text" name="email">
+                        <label for="email-address">Email Adress</label>
+                        <input type="text" name="email" id="email-address">
                     </fieldset>
                     <fieldset class="phone-number">
-                        <label for="phone-number" class="float-label">Phone number</label>
-                        <input type="text" name="phone-number">
+                        <label for="phone-number">Phone number</label>
+                        <input type="text" name="phone-number" id="phone-number">
                     </fieldset>
                     <fieldset class="spam">
-                        <input type="checkbox" name="spam" class="spam-input">
+                        <input type="checkbox" name="spam" id="spam">
                         <label for="spam"> I agree to dash terms.</label>
                     </fieldset>
                     <button type="submit">DRIVE WITH US</button>
@@ -51,14 +52,14 @@
                 <h3>See how much you can earn with Dash.</h3>
                 <p>How many hours do you want to drive with us this week?</p>
                 <fieldset class="hours">
-                    <label for="hours" class="float-label">Hours</label>
-                    <input type="text" name="hours">
+                    <label for="hours">Hours</label>
+                    <input type="text" name="hours" id="hours">
                 </fieldset>
                 <fieldset class="city">
-                    <label for="city" class="float-label">City</label>
-                    <input type="text" name="city">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city">
                 </fieldset>
-                <button type="calculate">CALCULATE</button>
+                <button type="submit">CALCULATE</button>
             </form>
             <nav class="footer-nav">
                 <a href="#" class="instagram">
