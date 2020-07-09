@@ -1,0 +1,607 @@
+
+/*BODY: Standart style to the body of all pages.*/
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Kalam|Kaushan+Script|Liu+Jian+Mao+Cao|Pacifico|Satisfy&display=swap');
+
+/*Defining font-family, font-size, and margin.*/
+body {
+    background-color: #F3EBDA;
+}
+main {
+    margin: 1.5rem;
+    font-family: 'Kalam', sans-serif;
+}
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.2rem;
+}
+p {
+    font-size: 1rem;
+}
+
+/****************************************************************************/
+
+/*HEADER: adding standart style to the headers of all pages.*/
+
+/*Main-banner/Favicon: displaying grid and definition of width and height for images and logo.*/
+
+.favicon {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 90%;
+    height: auto;
+    padding: 0 30px 0 20px;
+}
+
+.main-banner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Smoke: adding style and animation for smoke pieces.*/.smoke {
+    display: flex;
+    width: 50%;
+    height: auto;
+    padding: 0 30px 0 30px;
+    border: 0;
+    margin: 0;
+}
+/*Smoke style*/
+
+
+/*Smoke animation: each piece of smoke received a different animations.
+Transform-translate: used to make the smoke to move, climbing up slowly. 
+Transform-scale: used to make the smoke disapper on timing 100%.*/
+@keyframes smoke {
+    0% { 
+        transform: translate(0, 0);}   
+    25% {
+        transform: translate(0, -15px) scale(0.7);}
+    50% {
+        transform: translate(0,-40px) scale(0.5);}
+    75% {
+        transform: translate(0,-230px) scale(0.2);}
+    100% { 
+        transform: translate(0, 0) scale(0);}
+}
+
+@keyframes smoke-e1 {
+    25% {
+        transform: translate(-15px,-15px) scale(0.7);} 
+    50% {
+        transform: translate(-10px,-40px) scale(0.5);}  
+    75% {
+        transform: translate(-20px,-230px) scale(0.2);}
+    100% { 
+        transform: translate(0, 0);
+        transform: scale(0);}
+}
+
+@keyframes smoke-e2 {
+    25% {
+        transform: translate(12px,-15px) scale(0.7);}
+    50% {
+        transform: translate(8px,-40px) scale(0.5);}
+    75% {
+        transform: translate(16px,-230px) scale(0.2);}
+    100% { 
+        transform: translate(0, 0);
+        transform: scale(0);}
+}
+
+  .smoke-piece01 {
+        padding: 5px;
+        animation-name: smoke-e1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform: rotate(-5deg);
+    }
+
+    .smoke-piece02 {
+        padding: 5px;
+        animation-name: smoke;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .smoke-piece03 {
+        padding: 5px;
+        animation-name: smoke-e2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform: rotate(5deg);
+    }
+
+/*Navigation menu: Standart style for navigation of the main menu.*/
+.menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    border: 1px solid #9DADB5;
+    background-color: #A59090;
+}
+
+.menu a {
+    border: 1px solid #9DADB5;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Satisfy', cursive;
+    color:white;
+    font-style: bold;
+}
+
+.menu a:link,
+.menu a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: #a59090;
+}
+.menu a:hover,
+.menu a:active,
+.menu a.current-page {
+    color: white;
+    background-color: #9DADB5;
+}
+
+/****************************************************************************/
+
+/*SECTIONS*/
+/*Organizing the information per section of each page.*/
+
+/*HOME PAGE: History and Offers.*/
+.history {
+    background-color: white;
+    padding: 1rem;
+}
+
+.offers,
+.store {
+    background-color: #E7C197;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.offers h2 {
+    font-size: 1.2rem;
+}
+
+.offers-list {
+    display: grid;
+    grid-template-rows: repeat (4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    " offer1"
+    " offer2"
+    " offer3"
+    " offer-buttons"
+}
+
+.offer1,
+.offer2,
+.offer3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+    text-align: center;
+}
+
+.offer-buttons {
+    grid-area: offer-buttons;
+    width: 90%;
+    margin: auto;
+}
+
+.more-options,
+.buy-now {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+}
+
+.more-options {
+    background-color: #9DADB5;
+    color: white;
+}
+.buy-now {
+    background-color: white;
+}
+
+/*PRODUCTS PAGE: Categories.*/
+.categories {
+    background-color: white;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+
+.categories h1,
+.contact-form h1 {
+    padding: 1rem 0 0 0;
+    margin: 1.5rem;
+}
+
+.products-list div {
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    font-style: bold;
+}
+
+.products-list img {
+    max-width: 100%;
+}
+
+/*CONTACT PAGE: Form and Address.*/
+.contact-form {
+    background-color: white;
+    padding: 10px;
+    margin: 0, 1.5rem, 1.5rem, 1.5rem;
+}
+
+fieldset {
+    border: 0;
+    margin-right: 1.5rem;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr;
+    height: auto;
+}
+
+.form input{
+    width: 100%;
+    background-color: #9DADB5;
+    opacity: 25%;
+    padding: 10px;
+    border: 0;
+}
+
+.name {
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+.message {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+#message {
+    height: 100px;
+}
+
+.form button {
+    grid-row: 4/5;
+    grid-column: 1/3;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    background-color: #9DADB5;
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+}
+
+.google-maps {
+    max-width: 100%;
+}
+
+.store p {
+    text-align: center;
+}
+
+/****************************************************************************/
+
+/*FOOTER*/
+/*Standart style for all pages*/
+.footer {
+    background-color: #9DADB5;
+    color:white;
+    font-family: Arial;
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    width: 100%;
+    margin:auto;
+    padding: 0, 20px, 0, 20px; 
+}
+
+.footer p {
+    grid-column: 1/2;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.footer-nav {
+    grid-column: 2/3;
+}
+
+.footer-nav {
+    display: flex;
+    text-align: center;
+}
+
+.footer-nav p {
+    padding: 10px;
+}
+
+.facebook,
+.instagram {
+    padding: 5px;
+    margin-top: 10px;
+    width: 10%;
+}
+
+/****************************************************************************/
+
+/*TABLET VIEW: specific changes for tablet view and over it.*/
+
+@media (min-width: 768px) {
+
+/*Favicon: setting modyfied to tablet view and over to positionate the smoke better.*/
+    .favicon {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+    
+    .logo {
+        width: 100%;
+        padding: 0 10px 0 50px
+    }
+    
+    .smoke {
+        display: flex;
+        width: 50%;
+        height: auto;
+        padding: 50px 10px 0 100px;
+    }
+    .smoke-piece {
+        padding: 20px;
+    }
+
+/*Footer: grid area applied to tablet view and over.*/
+.footer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat (8, 1fr);
+    grid-template-areas:
+    " p . . . . . . nav"
+}
+
+.footer p{
+    grid-area: p;
+}
+
+.footer-nav{
+    grid-area: nav;
+}
+
+/*SECTIONS: changes on the style to configurate the grid.*/
+
+/*Home and Contact pages: adjustments to make the <main> displays grid in two columns.*/
+.main {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.history,
+.contact-form {
+    height: auto;
+    margin: 1.5rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.offers,
+.store {
+    margin: 1.5rem;
+    height: auto;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.offer1 {
+    grid-area: offer1;
+}
+
+.offer2 {
+    grid-area: offer2;
+}
+
+.offer3 {
+    grid-area: offer3;
+}
+
+/*.offer-buttons {
+    grid-area: offer-buttons;
+    width: 90%;
+    margin: auto;
+}
+
+.more-options,
+.buy-now {
+    width: 100%;
+}*/
+
+.history h1 {
+    font-size: 2rem;
+}
+
+.offers h2 {
+    font-size: 1.5rem;
+}
+
+.history p {
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+
+.offers-list p {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: left;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1f, 1fr;
+    grid-template-areas:
+ " name"
+ " email"
+ " mobile"
+ " message"
+ " message"
+ " message"
+ " button";
+}
+
+.name {
+    grid-area: name;
+}
+
+.email {
+    grid-area: email;
+}
+
+.mobile-number {
+    grid-area: mobile;
+}
+
+.message {
+    grid-area: message;
+}
+
+.form button {
+    grid-area: button;
+}
+
+/*Product page.*/
+.products-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas:
+ " croissants rolls pies"
+ " cakes waffles .";
+}
+
+.croissants {
+    grid-area: croissants;
+}
+
+.rolls {
+    grid-area: rolls;
+}
+
+.pies {
+    grid-area: pies;
+}
+
+.cakes {
+    grid-area: cakes;
+}
+
+.waffles {
+    grid-area: waffles;
+}
+
+}
+
+/****************************************************************************/
+
+/*Desktop view*/
+
+@media (min-width: 1280px) {
+
+/*SECTIONS: changes on the style to configurate the grid.*/
+
+/*Home Page: adjustments on the offers-list to display better for large view.*/
+    .offers-list {
+        display: grid;
+        grid-template-rows: repeat (2, 1fr);
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-areas:
+        " offer1 offer2"
+        " offer3 offer-buttons";
+    }
+    
+    .offer1 {
+        grid-area: offer1;
+        width: 60%;
+    }
+    
+    .offer2 {
+        grid-area: offer2;
+        width: 60%;
+    }
+    
+    .offer3 {
+        grid-area: offer3;
+        width: 60%;
+    }
+    
+    .offer-buttons {
+        grid-area: offer-buttons;
+        width: 100%;
+    }
+    
+/*PProduct page.*/
+    .products-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+     " croissants rolls pies cakes waffles"
+    }
+    
+    .croissants {
+        grid-area: croissants;
+    }
+    
+    .rolls {
+        grid-area: rolls;
+    }
+    
+    .pies {
+        grid-area: pies;
+    }
+    
+    .cakes {
+        grid-area: cakes;
+    }
+    
+    .waffles {
+        grid-area: waffles;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="main-banner">
+            <picture class="favicon">
+                <picture class="smoke">
+                    <source srcset="images/smoke-mobile.png" media="(max-width: 400px)">
+                    <source srcset="images/smoke-tablet.png" media="(max-width: 590px)">
+                    <source srcset="images/smoke-tablet2.png" media="(max-width: 760px)">
+                    <source srcset="images/smoke-desktop.png" media="(max-width: 1280px)">
+                    <img src="images/smoke-desktop.png" class="smoke-piece01"alt="smoke">
+                    <img src="images/smoke-desktop.png" class="smoke-piece02" alt="smoke">
+                    <img src="images/smoke-desktop.png" class="smoke-piece03" alt="smoke">
+                </picture> 
+                <img src="images/logo2.png" class="logo" alt="logo"> 
+            </picture>
+            <img src="images/banners/contact.png" class="banner" alt="contact-banner">
+        </div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html" class="current-page">Contact & Store</a>
+        </nav>
+    </header>  
+    <main class="main">
+        <section class="contact-form">
+            <h1>How can we help you?</h1>
+            <form class="form">
+                <fieldset class="name">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                </fieldset>
+                <fieldset class="email">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+                </fieldset>
+                <fieldset class="mobile-number">
+                    <label for="mobile-number">Mobile#:</label>
+                    <input type="text" name="mobile-number" id="mobile-number">
+                </fieldset>
+                <fieldset class="message">
+                    <label for="message">Message:</label>
+                    <input type="text" name="message" id="message">
+                </fieldset>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section class="store">
+            <h2>Our store</h2>
+            <div>
+                <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.0516343617473!2d-75.78253198444709!3d45.327579779099594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce07453328c2c1%3A0x1efd5a49ab3e11d7!2s190%20Greenbank%20Rd%2C%20Nepean%2C%20ON%20K2H%205V2!5e0!3m2!1spt-BR!2sca!4v1592852262283!5m2!1spt-BR!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p>190 Greenbank, Barrhaven - Ottawa</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Copyright &copy; 2020.</p>
+        <nav class="footer-nav">
+            <p>Visit our social media:</p>
+            <a href="#" class="facebook">
+                <img src="images/social-media/facebook.png" alt="facebook">    
+            </a>
+            <a href="#" class="instagram">
+                <img src="images/social-media/instagram.png" alt="instagram">    
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
