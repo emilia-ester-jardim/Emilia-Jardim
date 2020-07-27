@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/*Header*/
+
+/*Top*/
+.top {
+    background-color: #AFC8AA;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    height: 10%;
+}
+.nav-button {
+    background-color: #D22026;
+    display: flex;
+    border: 0;
+    grid-column: 1/2;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    height: 80%;
+    align-self: center;
+    width: 65%;
+    margin-left: 2rem;
+}
+
+.hamburger-menu {
+    margin-right: 1rem;
+}
+
+.nav-button p {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+.favicon {
+    grid-column: 2/3;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.icons {
+    grid-column: 3/4;
+    width: 80%;
+    display: flex;
+    height: 70%;
+}
+
+.search {
+    margin-right: 0.5rem;
+    width: 30%;
+    height: 80%;
+    align-self: center;
+    
+}
+
+.instagram {
+    margin-right: 0.5rem;
+    width: 30%;
+    height: 80%;
+    align-self: center;
+    
+}
+
+}
+.youtube {
+    margin-right: 0.5rem;
+    width: 20%;
+    height: auto;
+
+    
+}
+
+/*Main-banner*/
+.main-banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 30%;
+}
+
+
+/*Footer*/
+.footer {
+    background-color: #AFC8AA;
+}
+
+/*Desktop view*/
+
+@media (min-width: 1280px) {
+
+/*Top*/
+.top {
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+}
+.nav-button {
+    grid-column: 1/2;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    height: 80%;
+    align-self: center;
+    width: 65%;
+    margin-left: 2rem;
+}
+
+.hamburger-menu {
+    margin-right: 1rem;
+}
+
+.favicon {
+    grid-column: 3/5;
+    width: 50%;
+}
+
+.icons {
+    grid-column: 6/7;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+/*Main-banner*/
+.main-banner {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 30%;
+}
+}
